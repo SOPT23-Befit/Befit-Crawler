@@ -5,7 +5,7 @@ import re
 import pymysql
 import getItemInOneProduct
 
-conn = pymysql.connect(host='befit.ctecxm1v508y.ap-northeast-2.rds.amazonaws.com',user='Befit',password='dbalsgus',db='testDB', use_unicode=True, charset='utf8')
+conn = pymysql.connect(host='',user='',password='',db='', use_unicode=True, charset='utf8')
 
 def getProductLinksInBrand(brandName):
     fp = urllib.urlopen('https://store.musinsa.com/app/brand/goods_list/'+brandName)

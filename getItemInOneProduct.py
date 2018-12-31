@@ -90,7 +90,6 @@ def getProductDetailInfo(productLink):
 
 
 def getBrandId(brandName):
-    conn = pymysql.connect(host='befit.ctecxm1v508y.ap-northeast-2.rds.amazonaws.com',user='Befit',password='dbalsgus',db='testDB', use_unicode=True, charset='utf8')
     curs = conn.cursor()
     sql = 'select idx from brand where name_english=%s'
     curs.execute(sql, brandName)
@@ -138,7 +137,6 @@ def getProductCategory(productCategory):
 
 
 def mainCrawler(brand, link):
-    conn = pymysql.connect(host='befit.ctecxm1v508y.ap-northeast-2.rds.amazonaws.com',user='Befit',password='dbalsgus',db='testDB', use_unicode=True, charset='utf8')
     curs = conn.cursor()
 
     rawProductData = getProductDetailInfo(link)
